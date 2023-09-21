@@ -1,0 +1,23 @@
+#header {
+  background-color: red;
+  margin: -20px -8px;<!--Posición y e x-->
+}
+
+#logo{
+	margin: -20px 0px;
+}
+h3{
+text-decoration: underline;	
+}
+.elementos_menu_header{
+	margin: 20px -80px;
+}
+.elementos_menu_header li {
+ display: inline;
+ margin: 0px 112px;
+}
+
+
+#body{
+  background-color:white;
+}
