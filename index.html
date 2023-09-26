@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pruebas</title>
-  <link rel="stylesheet" href="stylePage_Seguros.css">
+  <link rel="stylesheet" href="stylePage_Segurosv2.css">
   <!--<link rel="stylesheet" href="style.css" /> -->
     
  <script src="https://apps.mypurecloud.com/webchat/jsapi-v1.js"></script> 
@@ -31,31 +31,202 @@
 
 <header id="header">
         <div class="wrap">
-            <div id="logo">
+			
+			<div id="div_logo1">
+				<img id="logo1" src="https://www.minsait.com/sites/default/files/minsait2018/logotipo_minsait_version_secundaria.jpg" 
+				alt="Logotipo de Minsait" height="58" width="300" align="left">
+			</div>
+			<div id="div_button_text_search" align="right">
+				<input id="text_search" type="search" name="busquedamusica" placeholder="&#191;Qu&eacute; desea buscar?">
+				<button id="button_search" onclick="myFunction_button_search()">&#x1F50E;</button>
+				
+			</div>	
+            <div id="divlogo2">
                 <!--<span class="gear">S</span>-->
-				<img src="https://segurosypensionesparatodos.fundacionmapfre.org/media/seguros/tipos-seguros-1194x535-1.png" 
-				alt="Logotipo de Seguros de la OCU" height="190" width="1300">
+				<img id="img_header" src="https://segurosypensionesparatodos.fundacionmapfre.org/media/seguros/tipos-seguros-1194x535-1.png" 
+				alt="Logotipo de Seguros mapfre" height="190" width="100%" align="center">
             </div>
-            <nav id="menu_header">
-                <ul class="elementos_menu_header">
-                    <li id="elemento1_menu_header">
-                        <a href="https://www.mapfre.es/particulares/">INICIO</a>
-                    </li>
-                    <li id="elemento2_menu_header">
-                        <a href="#">BLOG</a>
-                    </li>
-                    <li id="elemento3_menu_header">
-                        <a href="#">FORMACI&Oacute;N</a><!-- https://htmldesdecero.es/blog/colocar-acento-html/ -->
-                    </li>
-                    <li id="elemento4_menu_header">
-                        <a href="#">CONTACTO</a>
-                    </li>
-                </ul>
-            </nav>
+			<!--Mejor hacer esto con div para hacer grid https://www.w3schools.com/css/css_grid.asp en lugar de lista-->
+            <div id="menu_header">
+ 
+                    <div id="elemento1_menu_header">&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;<!--&emsp; es un espacio-->
+                        <a href="https://www.mapfre.es/particulares/">Seguro de Salud</a>
+                    </div>
+                    <div id="elemento2_menu_header">
+                        <a href="#">Coche</a>
+                    </div>
+                    <div id="elemento3_menu_header">
+                        <a href="#">Moto</a><!-- https://htmldesdecero.es/blog/colocar-acento-html/ -->
+                    </div>
+                    <div id="elemento4_menu_header">
+                        <a href="#">Casa</a>
+                    </div>
+					<div id="elemento5_menu_header">
+                        <a href="#">Contacto</a>
+                    </div>
+           
+            </div>
         </div>
 </header>
 <!-- Fin del Encabezado-->
+<div id="info1">
+			
+	<div id="Div_Seguro_de_Salud">
+			<p>Los seguros de salud que ofrecemos incorpora la mas alta innovaci&oacute;n para cuidar tu salud, 
+					y que ahora adem&aacute;s puede ayudarte a cuidar y prevenir tu salud mental y emocional (https://www.sanitas.es/).
+					<br><br>&#x1F3E5;&#x1F493;&#x1F331;</p>
+	</div>
+		
+		
+		
+	<div id="Div_Seguro_de_Coche">
+				<p id="p1_Div_Seguro_de_Coche">Descubre los beneficios de contratar tu seguro de coche con nosotros:</p>
+				<ul>
+					<li>Confianza y experiencia </li>
+					<li>Calidad al mejor precio </li>
+					<li>Ahorra en tu p&oacute;liza con el club de fidelidad</li>
+				</ul>
+				   <p id="p2_Div_Seguro_de_Coche">(https://segurosdecoche.mapfre.es/).
+					<br><br>&#x1F3CE;&#x1F697;</p>
+	</div>
+	
+	<div id="Div_Seguro_de_Moto">
+			<p>El seguro de moto m&aacute;s completo:<br><br> Equipamiento protegido, m&aacute;s de 1.500 gr&uacute;as propias y ventajas de MOTO Club MAPFRE.
+			Podr&aacute;s pagar mes a mes el d&iacute;a que mejor se adapte a ti.
+			<br><br>(https://www.mapfre.es/particulares/<br>seguros-para-motos/).</p>
+					<p id="emojis_moto">&#127949;&#x1F6F5;</p>
+	</div>
+	
+	
+	<div id="Div_Seguro_de_Casa">
+			<p>Disponemos de un cat&aacute;logo de seguros de Hogar, incluyendo coberturas m&aacute;s b&aacute;sicas como incendio, da&ntilde;os por agua, o a terceros, 
+			hasta las m&aacute;s completas como la cobertura de mantenimiento o da&ntilde;o accidental en el seguro de casa. 
+			<br>(https://www.mutua.es/seguros-hogar/).</p>
+					<p id="emojis_casa">&#x1F3D8; &#x1F3E1;</p>
+	</div>
+	
+	<div id="Div_Contacto">
+			<p>Para cualquier duda o consulta puede contactar con cualquiera de nuestros agentes.Nuestro horario de atenci&oacute;n es de Lunes
+			a Jueves de 8h-21h y Viernes de 8h-15h.</p>
+					<p id="emojis_contacto">&#x1F4DE;</p>
+	</div>
+		
+	<!--&emsp;&emsp;&emsp;&emsp;&emsp;--><!-- https://es.wikihow.com/insertar-espacios-en-HTML -->
+	<!--Emoji moto  casa  contacto -->
+	
+</div>
 
-<!-- Fin del Pie de Pagina-->
+
+<section id="info2">
+
+	<div id="div_info2_git_texto_imagen">
+		<div id="div_info2_git">
+			<img id="git_seguros" src="https://aba.chubb.com/assets/videos/new_home1.gif" width="150%" height="100%"/>
+		</div>
+		<div id="div_info2_texto">
+			<p> <h2 id="h2_text_Clientes"><FONT COLOR="red" size="6%"> Nuestro principal compromiso es el bienestar de nuestros clientes y allegados.
+			La p&oacute;liza que contrates de nuestro cat&aacute;logo de seguros, dispone de las prestaciones que m&aacute;s se adaptan a tus necesidades.</FONT></h2></p>
+		</div>
+	
+	   <div>
+	   <img id="image_info2" src="https://25746363.fs1.hubspotusercontent-eu1.net/hubfs/25746363/unnamed-1.png" width="100%" height="100%">
+	  </div>
+	</div>
+	
+   
+</section>
+
+<section id="info3">
+<!--inicio de codigo para el  Embeddable Framework--> 
+<div id="div_frame_texto_usuario_link"> 
+
+   <div id="div_frame">
+	 <iframe id="frame" allow="camera *; microphone *; autoplay *" src="https://login.mypurecloud.ie/#/authenticate-adv/org/" width="100%" height="100%"></iframe>
+   </div>
+   <div id="div_texto_usuario">
+		<h3 id="texto_usuario" width="100%" height="100%">Si ya tienes cuenta de usuario, puedes acceder a tu informaci&oacute;n de cliente en el siguiente login habilitado. Para nuevos usarios
+		acudir a la p&aacute;gina correspondiente.</h3>
+   </div>
+   <div id="div_link_url">	
+		<p id="link_url"><font size="5"><a href="#">Nuevo Cliente</a></font></p>	
+		<p> <br></p><!--Salto de línea-->
+   </div>	
+</div>
+</section>
+
+
+<!--Comienza pie de página-->
+<footer class="footer">
+  <div id="div_footer">
+   <div id="div1_footer_text_contenido"><FONT COLOR="white"><br><br>&ensp;CONTENIDO&#128315;</FONT>
+		<p id="lista_contenidos_div1_footer"><FONT COLOR="white"><br>
+	
+			<ul>
+				<li>Seguro de Salud</li>
+				<li>Seguro de Coche</li>
+				<li>Seguro de Moto</li>
+				<li>Seguro de Casa</li>
+				<li>Otros</li>
+			</ul> 
+	
+
+		</FONT></p>
+	</div>
+	
+	<div id="div2_footer_imagen">
+		
+		<!--"The Google Maps Embed API must be used in an iframe."-->
+		<image id="map" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Indra_headquarters_%28Alcobendas%2C_Spain%29_01.jpg/1199px-Indra_headquarters_%28Alcobendas%2C_Spain%29_01.jpg"
+		width="500px" height="300px"/>
+	
+	</div>
+	
+	<div id="div3_footer_contacto">
+	    
+		<p><FONT COLOR="white"> Puedes contactarnos a traves de:</FONT><br><br></p>
+		<p id="contacto_footer1"><FONT COLOR="white"> &#x1F464;&ensp;Telf:902165242<br>
+		&#x1F4E7;&ensp;E-mail:buzon@company.com<br><br></FONT></p>
+	 
+		<p><FONT COLOR="white"> Tambi&eacute;n tenemos disponibles los siguientes canales de comunicaci&oacute;n:</p>
+	 
+		<div class="grid-container_iconos">
+		    
+			<div class="item1"><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/4494/4494475.png" width="20px"/></a></div>
+			<div class="item2"><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/3938/3938147.png" width="20px"/></a></div>
+			<div class="item3"><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/733/733585.png" width="20px"/></a></div>
+			<div class="item4"><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/4494/4494477.png" width="20px"/></a></div>
+			
+		</div>
+	
+	
+	
+	
+	</div>
+	
+</div>	
+</footer>
 </body>
+<script>
+function myFunction_button_search() {/*https://www.w3schools.com/js/js_function_invocation.asp*/
+  let x = document.getElementById("text_search");
+  /*x.style.fontSize = "25px";*/
+  x.style.color = "red";
+  /*alert(x.value)*//*https://es.stackoverflow.com/questions/573918/mostrar-datos-de-una-caja-de-texto-en-java-script*/
+  if(x.value!='') {
+	let search=x.value
+	let search_lowercase=search.toLowerCase()
+	
+	if(search_lowercase=="coche"){
+	location.href ="https://www.mapfre.es/particulares/seguros-de-coche/";
+	
+	}
+	
+	else{
+	alert("El valor introducido no tiene ninguna coincidencia")
+	}
+  }
+}
+</script>
 </html>
+
+
