@@ -34,12 +34,12 @@ window.onload= cargarFunciones;
 function cargarFunciones() {
     
 	Prompt_nombre_usuario();
-    Chat_Genesys_Cloud();
+    Chat_Genesys_Cloud_Set_Get_Participant_Data();
 	
     
 }
 
-function Chat_Genesys_Cloud() {<!--1. https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/pluginExamples 2. https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/SDKCommandsEvents/-->
+function Chat_Genesys_Cloud_Set_Get_Participant_Data() {<!--1. https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/pluginExamples 2. https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/SDKCommandsEvents/-->
 
 Genesys("command", "Database.set", {
   messaging: {
@@ -48,7 +48,8 @@ Genesys("command", "Database.set", {
       <!--department: "sales",-->
 	  <!--property_type: "apartment",-->
       <!--device: "mobile",-->
-	  nombre_usuario:"Juan",
+	  <!--nombre_usuario:"Juan",-->
+	  nombre_usuario:person,
 	  contacto:"chat"
     }
   }
