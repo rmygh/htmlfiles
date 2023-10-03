@@ -20,15 +20,23 @@
     g[e].c = es;
     ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
   })
-  var person = prompt("Please enter your name", "Harry Potter");
-  if (person != null) {
-    document.getElementById("demo").innerHTML =
-    "Hello " + person + "! How are you today?";
   (window, 'Genesys', 'https://apps.mypurecloud.ie/genesys-bootstrap/genesys.min.js', {
     environment: 'prod-euw1',
     deploymentId: '37a5a41d-a002-42c7-a449-f3da8269812b'
   });
 </script>
+
+<script type="text/javascript">
+Genesys("command", "Database.set", {
+  messaging: {
+    customAttributes: {
+      department: "sales",
+      property_type: "apartment",
+      device: "mobile"
+    }
+  }
+}); 
+</script> 
   
 </head>
 
