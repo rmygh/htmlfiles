@@ -26,7 +26,9 @@
   });
 </script>
 
-<script type="text/javascript">
+<script type="text/javascript"><!--https://www.lawebdelprogramador.com/foros/JavaScript/1461283-Ejecutar-una-funcion-cuando-la-pagina-se-haya-cargado-solucion.html-->
+
+window.onload=function() {
 Genesys("command", "Database.set", {
   messaging: {
     customAttributes: {
@@ -36,6 +38,8 @@ Genesys("command", "Database.set", {
     }
   }
 }); 
+}
+
 </script> 
   
 </head>
