@@ -31,11 +31,6 @@
 
 window.onload=function_set_get_participant() {<!--1. https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/pluginExamples 2. https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/SDKCommandsEvents/-->
 
-let person = prompt("Por favor, introduce tu nombre", "Anónimo");
- if (person != null) {
-    document.getElementById("emojis_contacto").innerHTML =
-    "Hello " + person + "! How are you today?";
-  }
 Genesys("command", "Database.set", {
   messaging: {
     customAttributes: {
