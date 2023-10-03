@@ -31,18 +31,7 @@
 
 window.onload=function() {<!--1. https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/pluginExamples 2. https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/SDKCommandsEvents/-->
 
-Genesys("command", "Database.set", {
-  messaging: {
-    customAttributes: {
-	  
-      <!--department: "sales",-->
-	  <!--property_type: "apartment",-->
-      <!--device: "mobile",-->
-	  nombre_usuario:"Juan",
-	  contacto:"chat"
-    }
-  }
-}); 
+let person = prompt("Por favor, introduce tu nombre", "Anónimo");
 }
 
 <!-- https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/pluginExamples -->
