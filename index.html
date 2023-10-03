@@ -39,10 +39,11 @@ Genesys("command", "Database.set", {
   messaging: {
     customAttributes: {
 	  
-      department: "sales",
-	  property_type: "apartment",
-      device: "mobile",
-	  nombre_usuario:"Juan"
+      <!--department: "sales",-->
+	  <!--property_type: "apartment",-->
+      <!--device: "mobile",-->
+	  nombre_usuario:"Juan",
+	  contacto:"chat"
     }
   }
 }); 
@@ -239,9 +240,9 @@ Genesys("command", "Database.set", {
 <script>
 function myFunction_button_search() {/*https://www.w3schools.com/js/js_function_invocation.asp*/
   let x = document.getElementById("text_search");
-  /*x.style.fontSize = "25px";*/
+  <!--x.style.fontSize = "25px";-->
   x.style.color = "red";
-  /*alert(x.value)*//*https://es.stackoverflow.com/questions/573918/mostrar-datos-de-una-caja-de-texto-en-java-script*/
+  <!--alert(x.value)--><!--https://es.stackoverflow.com/questions/573918/mostrar-datos-de-una-caja-de-texto-en-java-script -->
   if(x.value!='') {
 	let search=x.value
 	let search_lowercase=search.toLowerCase()
