@@ -28,18 +28,30 @@
 
 <script type="text/javascript"><!--https://www.lawebdelprogramador.com/foros/JavaScript/1461283-Ejecutar-una-funcion-cuando-la-pagina-se-haya-cargado-solucion.html-->
 
-window.onload=function() {
+window.onload=function() {<!--1. https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/pluginExamples 2. https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/SDKCommandsEvents/-->
+
+let person = prompt("Por favor, introduce tu nombre", "Anónimo");
+ /* if (person != null) {
+    document.getElementById("demo").innerHTML =
+    "Hello " + person + "! How are you today?";
+  }*/
 Genesys("command", "Database.set", {
   messaging: {
     customAttributes: {
-      department: "sales",
-      property_type: "apartment",
-      device: "mobile"
+	  
+      departamento: "ventas",
+      tipo de propiedad: "seguros",
+      contacto: "chat",
+	  nombre_cliente:person
     }
   }
 }); 
 }
-
+/*
+https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/pluginExamples
+These custom attributes will automatically be reflected in the interaction details. You can also create custom script variables to 
+surface these attributes to agents during an interaction or you can use the Get Participant Data action in an Architect flow to improve routing.
+*/
 </script> 
   
 </head>
