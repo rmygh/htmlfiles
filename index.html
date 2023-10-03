@@ -31,8 +31,9 @@
 
 window.onload= cargarFunciones;
 
-function cargarFunciones() {
+function cargarFunciones() {<!--https://es.stackoverflow.com/questions/566252/cargar-varias-funciones-en-evento-onload-->
     
+	var person="Anónimo";
 	Prompt_nombre_usuario();
     Chat_Genesys_Cloud_Set_Get_Participant_Data();
 	
@@ -61,7 +62,7 @@ Genesys("command", "Database.set", {
 <!-- surface these attributes to agents during an interaction or you can use the Get Participant Data action in an Architect flow to improve routing.-->
 
 function Prompt_nombre_usuario() {
-var person = prompt("Por favor, introduce tu nombre", "Anónimo");
+person = prompt("Por favor, introduce tu nombre", "Anónimo");
  <!--if (person != null) {document.getElementById("emojis_contacto").innerHTML ="Hello " + person + "! How are you today?";}-->
 }
 
