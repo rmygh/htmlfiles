@@ -52,8 +52,13 @@ function Chat_Genesys_Cloud_removes_data_Database() {<!--Para evitar que se escr
 
 Genesys("command", "Database.remove", { 
 
-  messaging: { 
-	customAttributes: { } }
+    messaging: {
+    customAttributes: {
+	  
+	  nombre_usuario:person,
+	  tipo_contacto:"chat"
+    }
+  }
 
  });
 }
