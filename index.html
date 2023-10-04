@@ -35,18 +35,30 @@ function cargarFunciones() {<!--https://es.stackoverflow.com/questions/566252/ca
     
 	var person="Anónimo";<!--https://es.stackoverflow.com/questions/233399/como-pasar-una-variable-de-una-funcion-a-otra-en-javascript-->
 	Prompt_nombre_usuario();
+	<!--https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/SDKCommandsEvents/databasePlugin-->
+	<!--https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/pluginExamples-->
+	Chat_Genesys_Cloud_removes_data_Database();
     Chat_Genesys_Cloud_Set_Get_Participant_Data();
 	
     
 }
 
+function Prompt_nombre_usuario() {
+person = prompt("Por favor, introduce tu nombre", "An\u00F3nimo");<!-- Tildes en js con unicode https://lefunes.wordpress.com/2007/11/14/caracteres-especiales-en-javascript/ -->
+ <!--if (person != null) {document.getElementById("emojis_contacto").innerHTML ="Hello " + person + "! How are you today?";}-->
+}
+
+function Chat_Genesys_Cloud_removes_data_Database() {<!--Para evitar que se escriban set participant data antiguos que tenían otra key-->
+
+Genesys("command", "Database.remove", { name: "messaging.customAttributes" });
+}
 function Chat_Genesys_Cloud_Set_Get_Participant_Data() {<!--1. https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/pluginExamples 2. https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/SDKCommandsEvents/-->
 
 Genesys("command", "Database.set", {
   messaging: {
     customAttributes: {
 	  
-	  <!-- La key debe coincidir en el Get Participant Data-->
+	  <!-- La key debe coincidir en el Get Participant Data(key:value)-->
       <!--department: "sales",-->
 	  <!--property_type: "apartment",-->
       <!--device: "mobile",-->
@@ -63,10 +75,6 @@ Genesys("command", "Database.set", {
 <!-- These custom attributes will automatically be reflected in the interaction details. You can also create custom script variables to -->
 <!-- surface these attributes to agents during an interaction or you can use the Get Participant Data action in an Architect flow to improve routing.-->
 
-function Prompt_nombre_usuario() {
-person = prompt("Por favor, introduce tu nombre", "An\u00F3nimo");<!-- Tildes en js con unicode https://lefunes.wordpress.com/2007/11/14/caracteres-especiales-en-javascript/ -->
- <!--if (person != null) {document.getElementById("emojis_contacto").innerHTML ="Hello " + person + "! How are you today?";}-->
-}
 
 </script> 
   
