@@ -50,7 +50,12 @@ person = prompt("Por favor, introduce tu nombre", "An\u00F3nimo");<!-- Tildes en
 
 function Chat_Genesys_Cloud_removes_data_Database() {<!--Para evitar que se escriban set participant data antiguos que tenían otra key-->
 
-Genesys("command", "Database.remove", { name: "messaging.customAttributes" });
+Genesys("command", "Database.remove", { 
+
+  messaging: { 
+	customAttributes: { } }
+
+ });
 }
 function Chat_Genesys_Cloud_Set_Get_Participant_Data() {<!--1. https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/pluginExamples 2. https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/SDKCommandsEvents/-->
 
