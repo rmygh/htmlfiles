@@ -37,7 +37,7 @@ function cargarFunciones() {<!--https://es.stackoverflow.com/questions/566252/ca
 	Prompt_nombre_usuario();
 	<!--https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/SDKCommandsEvents/databasePlugin-->
 	<!--https://developer.genesys.cloud/commdigital/digital/webmessaging/messengersdk/pluginExamples-->
-	Chat_Genesys_Cloud_removes_data_Database();
+	<!--Chat_Genesys_Cloud_removes_data_Database();--><!--Review-->
     Chat_Genesys_Cloud_Set_Get_Participant_Data();
 	
     
@@ -73,8 +73,8 @@ Genesys("command", "Database.set", {
 	  <!--property_type: "apartment",-->
       <!--device: "mobile",-->
 	  <!--nombre_usuario:"Juan",-->
-	  nombre_usuario_input_web:person,
-	  contacto_input_web:"chat",
+	  nombre_usuario:person,
+	  tipo_contacto:"chat",
 	  email_cliente_input_web:"prueba_demo_seguros@company.es"
     }
   }
